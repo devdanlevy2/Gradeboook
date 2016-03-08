@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160308194659) do
+ActiveRecord::Schema.define(version: 20160308205339) do
 
   create_table "grades", force: :cascade do |t|
     t.string   "assignment"
@@ -38,6 +38,13 @@ ActiveRecord::Schema.define(version: 20160308194659) do
     t.string   "parent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
